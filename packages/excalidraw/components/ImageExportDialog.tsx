@@ -297,6 +297,18 @@ const ImageExportModal = ({
           </FilledButton>
           <FilledButton
             className="ImageExportModal__settings__buttons__button"
+            label={t("imageExportDialog.title.exportToPdf")}
+            onClick={() =>
+              onExportImage(EXPORT_IMAGE_TYPES.pdf, exportedElements, {
+                exportingFrame,
+              })
+            }
+            icon={downloadIcon}
+          >
+            {t("imageExportDialog.button.exportToPdf")}
+          </FilledButton>
+          <FilledButton
+            className="ImageExportModal__settings__buttons__button"
             label={t("imageExportDialog.title.exportToSvg")}
             onClick={() =>
               onExportImage(EXPORT_IMAGE_TYPES.svg, exportedElements, {

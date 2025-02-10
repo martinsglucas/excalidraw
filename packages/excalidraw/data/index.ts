@@ -27,6 +27,7 @@ import { canvasToBlob } from "./blob";
 import type { FileSystemHandle } from "./filesystem";
 import { fileSave } from "./filesystem";
 import { serializeAsJSON } from "./json";
+import { exportCanvasToPdf } from "./pdf";
 
 export { loadFromBlob } from "./blob";
 export { loadFromJSON, saveAsJSON } from "./json";
@@ -195,6 +196,9 @@ export const exportCanvas = async (
         throw new Error(t("alerts.couldNotCopyToClipboard"));
       }
     }
+  } else if (type === "pdf") {
+    return exportCanvasToPdf(elements, appState, files, {exportBackground, viewBackgroundColor, exportingFrame});
+
   } else {
     // shouldn't happen
     throw new Error("Unsupported export type");

@@ -406,11 +406,13 @@
     },
     "title": {
       "exportToPng": "Exportar como PNG",
+      "exportToPdf": "Exportar como PDF",
       "exportToSvg": "Exportar como SVG",
       "copyPngToClipboard": "Copiar PNG para área de transferência"
     },
     "button": {
       "exportToPng": "PNG",
+      "exportToPdf": "PDF",
       "exportToSvg": "SVG",
       "copyPngToClipboard": "Copiar para a área de transferência"
     }
